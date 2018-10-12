@@ -1,0 +1,46 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$gJn8KGp6zB3h$G+S8hAuoVYYcB6Kwoh+Nk0rvY2LN81yDW7Bsu8x1kSM=",
+      "last_login": "1990-01-01T00:00:00.000Z",
+      "is_superuser": false,
+      "username": "testuser",
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "test@company.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "1990-01-01T00:00:00.000Z",
+      "groups": [
+
+      ],
+      "user_permissions": [
+
+      ]
+    }
+  },
+  {
+    "model": "tasks.task",
+    "pk": 1,
+    "fields": {
+      "owner": 1,
+      "title": "A Task",
+      "description": "This is a task with no due date.",
+      "due_date": null,
+      "complete_time": null
+    }
+  },
+  {
+    "model": "tasks.task",
+    "pk": 2,
+    "fields": {
+      "owner": 1,
+      "title": "Another Task",
+      "description": "This is a task with a due date in the far future.",
+      "due_date": "2019-06-30",
+      "complete_time": null
+    }
+  }
+]

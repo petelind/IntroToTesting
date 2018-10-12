@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}My Tasks{% endblock %}
+
+{% block content %}
+
+<div class="task__list card-wrapper raised">
+    <h1>To Do</h1>
+    {% if tasks %}
+        <ul>
+            {% for task in tasks %}
+                {% include 'task_item.html' with task=task %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You currently have no tasks.</p>
+    {% endif %}
+
+    <a class="task__add levitate" href="{% url 'task-add' %}">
+        <span>+</span>
+    </a>
+</div>
+
+
+{% endblock %}

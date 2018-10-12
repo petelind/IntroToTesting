@@ -1,0 +1,6 @@
+coverage==4.4.1
+django==1.10.7
+django-autofixture==0.12.1
+django-widget-tweaks==1.4.1
+mock==2.0.0
+selenium==3.4.3

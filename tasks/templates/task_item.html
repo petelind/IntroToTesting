@@ -1,0 +1,25 @@
+<li class="task__item">
+    <a href="{% url 'task-edit' task.pk %}">
+        <h3 class="title {% if task.is_complete %}complete{% endif %}">
+            {{ task.title }}
+        </h3>
+    </a>
+    <p class="description">
+        {{ task.description }}
+    </p>
+    {% if task.due_date %}
+        <p class="due">
+            Due: {{ task.due_date }}
+        </p>
+    {% endif %}
+    <form method="POST" action="{% url 'task-toggle' task_id=task.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="task-complete">
+            {% if task.is_complete %}
+                <span class="glyphicon glyphicon glyphicon-ok-circle glyphicon-red"></span>
+            {% else %}
+                <span class="glyphicon glyphicon glyphicon-ok-circle glyphicon-blue"></span>
+            {% endif %}
+        </button>
+    </form>
+</li>

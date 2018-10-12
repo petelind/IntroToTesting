@@ -1,0 +1,16 @@
+[run]
+branch = True
+include = tasks/*
+        *todo/*
+omit = *.virtualenvs/*
+       */venv/*
+       */__init__*
+       */test*.py
+       */migrations/*
+       */urls.py
+       */wsgi.py
+       */manage.py
+       tasks/admin.py
+       tasks/apps.py
+       */features/*
+

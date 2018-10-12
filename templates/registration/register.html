@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+    <div class="card-wrapper">
+        <h1>Register</h1>
+        <form method="post">
+            <div class="errors">
+                {{ form.errors }}
+            </div>
+            <div class="form-group">
+                {% csrf_token %}
+                {% for field in form %}
+                    <label>{{ field.label }}</label>
+                    {% render_field field class+="form-control" %}
+                {% endfor %}
+            </div>
+            <button class="btn btn-success btn-center btn-fullwidth" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}
